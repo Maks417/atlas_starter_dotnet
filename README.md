@@ -46,14 +46,14 @@ this project as a ZIP archive,
 
 ### 3. Configure your Atlas Credentials
 
-1. Open the `Program.cs` file.
+1. Open the `appsettings.json` file.
 
-2. On line 17, replace the placeholder text with the connection string 
+2. Replace the placeholder text with the connection string section
    to your Atlas cluster. For more information on finding the connection 
    string, see [Connect via Driver](https://docs.atlas.mongodb.com/driver-connection/).
 
-```csharp
-    var mongoUri = "<Your Atlas Connection String>";
+```json
+    "MongoDb": "<Your Atlas Connection String>"
 ```
 
 ### 4. Run the Project
@@ -68,6 +68,6 @@ Have fun modifying the code to experiment with the C# driver and MongoDB.
 
 Are you having trouble getting connected to your MongoDB Atlas instance? Double-check the following:
 
-1. Have you replaced the `mongoUri` variable with a valid connection string provided by the Atlas UI?
+1. Have you replaced the `MongoDb` setting in `appsettings.json` file with a valid connection string provided by the Atlas UI?
 
 2. Have you [whitelisted your current IP address](https://docs.atlas.mongodb.com/security-whitelist/) in the Atlas UI?
